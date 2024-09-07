@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+import { IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -40,29 +41,35 @@ const Navbar = () => {
         </ul>
         <button
           onClick={() => setDarkMode(!darkMode)}
+          data-ripple-light="true" data-popover-target="menu"
           className="md:mr-2 mr-14 p-2 bg-gray-200 dark:bg-nord2 rounded-full shadow-md absolute top-2 right-2"
         >
           {darkMode ? '☀️' : '🌙'}
         </button>
         <div className="md:hidden mr-2" onClick={handleClick}>
-          {!nav ? <FaBars size={25} /> : <FaTimes size={25} />}
+          {!nav ? <IoMenu size={25} /> : <FaTimes size={22} />}
         </div>
       </div>
       {nav && (
-        <ul className="absolute top-16 left-0 w-full bg-nord6 text-nord0 dark:bg-nord0 dark:text-nord6 flex flex-col items-center">
-          <li className="py-4">
+        <ul role="menu" data-popover="menu" data-popover-placement="bottom" class="w-full absolute z-10 min-w-[180px] overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none dark:bg-nord3 dark:text-nord4">
+          <li role="menuitem"
+            class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
             <Link onClick={handleClick} to="hero" smooth={true} duration={500}>Home</Link>
           </li>
-          <li className="py-4">
+          <li role="menuitem"
+            class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
             <Link onClick={handleClick} to="about" smooth={true} duration={500}>About</Link>
           </li>
-          <li className="py-4">
+          <li role="menuitem"
+            class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
             <Link onClick={handleClick} to="projects" smooth={true} duration={500}>Projects</Link>
           </li>
-          <li className="py-4">
+          <li role="menuitem"
+            class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
             <Link onClick={handleClick} to="skills" smooth={true} duration={500}>Skills</Link>
           </li>
-          <li className="py-4">
+          <li role="menuitem"
+            class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
             <Link onClick={handleClick} to="contact" smooth={true} duration={500}>Contact</Link>
           </li>
         </ul>

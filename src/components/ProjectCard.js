@@ -1,6 +1,6 @@
 // src/components/ProjectCard.js
 import React from 'react';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub  } from 'react-icons/fa';
 
 const ProjectCard = ({ project }) => {
   return (

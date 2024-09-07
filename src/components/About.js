@@ -10,7 +10,7 @@ const About = () => {
         <div className="mt-8 md:mt-0">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-lg leading-relaxed">
-            [Your bio goes here. Talk about your background, experience, passions, and what makes you unique.]
+            I'm a student who have the enthusiasm in computer
           </p>
         </div>
       </div>
