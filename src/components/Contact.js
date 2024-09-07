@@ -16,7 +16,7 @@ const Contact = () => {
     // Replace this with your form handling logic (e.g., using Formspree)
     try {
       // Example using Fetch API to send form data
-      const response = await fetch('https://formspree.io/f/yourformid', {
+      const response = await fetch('https://formspree.io/f/mjkbzplz', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
