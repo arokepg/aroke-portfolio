@@ -1,4 +1,5 @@
 {
+  "homepage": "https://arokepg.github.io/aroke/",
   "name": "aroke",
   "version": "0.1.0",
   "private": true,
@@ -26,6 +27,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages-clean && gh-pages -d build -r https://github.com/arokepg/aroke.git",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
