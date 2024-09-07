@@ -18,7 +18,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <div className="fixed w-full bg-nord6 dark:bg-nord0 dark:text-nord6 shadow-md z-10">
+    <div className="cursor-pointer fixed w-full bg-nord6 dark:bg-nord0 dark:text-nord6 shadow-md z-10">
       <div className="container mx-auto flex justify-between items-center p-4">
         <h1 className="text-2xl font-bold">Aroke</h1>
         <ul className="hidden md:flex">
