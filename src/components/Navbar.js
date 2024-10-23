@@ -38,6 +38,9 @@ const Navbar = () => {
           <li className="mx-4 hover:bg-nord4 dark:hover:bg-nord3">
             <Link to="contact" smooth={true} duration={500}>Contact</Link>
           </li>
+          <li className="mx-4 hover:bg-nord4 dark:hover:bg-nord3">
+            <a href="https://aroke.notion.site/Aroke-fb68f8656a3c40e98a1320eff8087699?pvs=4" target="_blank" smooth={true} duration={500}>More</a>
+          </li>
         </ul>
         <button
           onClick={() => setDarkMode(!darkMode)}
